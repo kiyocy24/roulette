@@ -18,3 +18,8 @@ jobs:
 
     - name: Test
       run: make test
+
+    - name: Run GoReleaser (dry-run)
+      uses: goreleaser/goreleaser-action@v2
+      with:
+        args: release --rm-dist --skip-publish --snapshot
