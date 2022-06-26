@@ -16,7 +16,7 @@ See each sub-command's help for details on how to use the generated script.
 
 ### SEE ALSO
 
-* [roulette](roulette.md)	 - This CLI allows you to create your own roulette, so you run the lottery!
+* [roulette](roulette.md)	 - This CLI creates roulette and draws lots
 * [roulette completion bash](roulette_completion_bash.md)	 - Generate the autocompletion script for bash
 * [roulette completion fish](roulette_completion_fish.md)	 - Generate the autocompletion script for fish
 * [roulette completion powershell](roulette_completion_powershell.md)	 - Generate the autocompletion script for powershell

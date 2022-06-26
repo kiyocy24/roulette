@@ -1,6 +1,6 @@
 ## roulette
 
-This CLI allows you to create your own roulette, so you run the lottery!
+This CLI creates roulette and draws lots
 
 ### Synopsis
 

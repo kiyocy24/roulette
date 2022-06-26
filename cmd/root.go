@@ -34,7 +34,7 @@ var filepath = path.Join(".roulette", "item.json")
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "roulette",
-	Short: "This CLI allows you to create your own roulette, so you run the lottery!",
+	Short: "This CLI creates roulette and draws lots",
 	Long: `Create a roulette and draw lots.
 Add items with the add command and draw lots with the lot command.
 You can check the registered items by using the list command.
