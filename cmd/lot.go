@@ -46,7 +46,7 @@ The name of the item you hit is displayed..`,
 			return errors.New("total weight is 0")
 		}
 		hit := helper.Lot(items)
-		fmt.Printf("%s is hit", hit)
+		fmt.Println(hit)
 
 		return nil
 	},
