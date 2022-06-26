@@ -1,5 +1,4 @@
-The MIT License (MIT)
-
+/*
 Copyright © 2022 Kiyoshi Kanazawa <kiyocy24@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -19,3 +18,44 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+*/
+package cmd
+
+import (
+	"errors"
+	"fmt"
+	"github.com/kiyocy24/roulette/helper"
+
+	"github.com/spf13/cobra"
+)
+
+// lotCmd represents the lot command
+var lotCmd = &cobra.Command{
+	Use:   "lot",
+	Short: "A brief description of your command",
+	Long: `A longer description that spans multiple lines and likely contains examples
+and usage of using your command. For example:
+
+Cobra is a CLI library for Go that empowers applications.
+This application is a tool to generate the needed files
+to quickly create a Cobra application.`,
+	RunE: func(cmd *cobra.Command, args []string) error {
+		items, err := helper.Load(filepath)
+		if err != nil {
+			return err
+		}
+
+		totalWeight := helper.Total(items)
+		if totalWeight <= 0 {
+			return errors.New("total weight is 0")
+		}
+		hit := helper.Lot(items)
+		fmt.Printf("%s is hit", hit)
+
+		return nil
+	},
+}
+
+func init() {
+	rootCmd.AddCommand(lotCmd)
+}
