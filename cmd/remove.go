@@ -33,7 +33,7 @@ import (
 // removeCmd represents the remove command
 var removeCmd = &cobra.Command{
 	Use:   "remove",
-	Short: "Remove registered item",
+	Short: "remove registered item",
 	Long: `Remove registered item.
 If you specify an unregistered item name,
 nothing happens and you get an error.`,

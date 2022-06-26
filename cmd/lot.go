@@ -32,7 +32,7 @@ import (
 // lotCmd represents the lot command
 var lotCmd = &cobra.Command{
 	Use:   "lot",
-	Short: "Draw lots based on weight",
+	Short: "draw lots based on weight",
 	Long: `Draw lots based on weight.
 The name of the item you hit is displayed..`,
 	RunE: func(cmd *cobra.Command, args []string) error {

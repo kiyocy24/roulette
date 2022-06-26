@@ -32,8 +32,8 @@ import (
 // addCmd represents the add command
 var addCmd = &cobra.Command{
 	Use:   "add",
-	Short: "Add a item and its weight",
-	Long: `Add a item and its weight.
+	Short: "add an item and its weight",
+	Long: `Add an item and its weight.
 If you specify an already registered item name, it will be updated
 
 example)
@@ -82,6 +82,6 @@ example)
 
 func init() {
 	rootCmd.AddCommand(addCmd)
-	addCmd.Flags().StringP("name", "n", "", "Item name (required)")
-	addCmd.Flags().IntP("weight", "w", 0, "Weight (required)")
+	addCmd.Flags().StringP("name", "n", "", "item name (required)")
+	addCmd.Flags().IntP("weight", "w", 0, "weight (required)")
 }
