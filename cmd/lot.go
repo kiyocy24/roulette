@@ -46,7 +46,8 @@ The name of the item you hit is displayed..`,
 			return errors.New("total weight is 0")
 		}
 		hit := helper.Lot(items)
-		fmt.Println(hit)
+		percentage := float64(items[hit]*100) / float64(totalWeight)
+		fmt.Printf("%s %.2f%%\n", hit, percentage)
 
 		return nil
 	},
