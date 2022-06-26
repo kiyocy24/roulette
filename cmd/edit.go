@@ -13,7 +13,7 @@ import (
 // editCmd represents the edit command
 var editCmd = &cobra.Command{
 	Use:   "edit",
-	Short: "Edit a item file",
+	Short: "edit a item file",
 	Long: `Edit registered items and weights on file.
 Vim must be installed`,
 	RunE: func(cmd *cobra.Command, args []string) error {

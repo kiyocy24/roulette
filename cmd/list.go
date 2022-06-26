@@ -34,7 +34,7 @@ import (
 // listCmd represents the list command
 var listCmd = &cobra.Command{
 	Use:   "list",
-	Short: "Display a list of items.",
+	Short: "display a list of items",
 	Long: `Name, weight and percentage are displayed.
 `,
 	RunE: func(cmd *cobra.Command, args []string) error {
