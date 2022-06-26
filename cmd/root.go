@@ -27,7 +27,7 @@ import (
 	"path"
 )
 
-var filepath = path.Join("roulette", "item.json")
+var filepath = path.Join(".roulette", "item.json")
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{

@@ -32,13 +32,13 @@ import (
 // addCmd represents the add command
 var addCmd = &cobra.Command{
 	Use:   "add",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
+	Short: "Add a item and its weight",
+	Long: `Add a item and its weight.
+If you specify an already registered item name, it will be updated
 
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+example)
+  add --name banana --weight 100
+  add -n apple --weight 50`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		name, err := cmd.Flags().GetString("name")
 		if err != nil {
@@ -82,6 +82,6 @@ to quickly create a Cobra application.`,
 
 func init() {
 	rootCmd.AddCommand(addCmd)
-	addCmd.Flags().StringP("name", "n", "", "Item name")
-	addCmd.Flags().IntP("weight", "w", 0, "Weight")
+	addCmd.Flags().StringP("name", "n", "", "Item name (required)")
+	addCmd.Flags().IntP("weight", "w", 0, "Weight (required)")
 }
